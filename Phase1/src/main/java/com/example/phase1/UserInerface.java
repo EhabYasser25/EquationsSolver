@@ -1,6 +1,7 @@
 package com.example.phase1;
 
 import java.awt.EventQueue;
+import java.util.Scanner;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -24,6 +25,20 @@ public class UserInerface extends JFrame {
 				}
 			}
 		});
+		/*Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int it = sc.nextInt();
+		double[][] coff = new double[n][n+1];
+		for(int i=0 ; i<n ; i++) {
+			for(int j=0 ; j<n+1 ;j++) {
+				coff[i][j] = sc.nextDouble();
+			}
+		}
+		GaussSeidel Solver = new GaussSeidel(coff,it);
+		double ans[] = Solver.solve();
+		for(int i=0 ; i<n ; i++) {
+			System.out.println(ans[i]);
+		}*/
 	}
 
 	/**
