@@ -108,7 +108,7 @@ public class DoolittleLU {
     }
 
     //Testing
-    /*public static void main(String[] args) {
+   /* public static void main(String[] args) {
         DoolittleLU test;
         double[][] testCoef = {
                 {25, 5, 1},
