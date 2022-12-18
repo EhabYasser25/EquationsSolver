@@ -11,12 +11,12 @@ public class CroutDecomposition {
     private double[] ans;
     private double tol;
 
-    CroutDecomposition(double[][] coef, double[] b, boolean enableScaling, double tol){
+    CroutDecomposition(double[][] coef, boolean enableScaling, double tol){
         this.coef = coef;
-        this.b = b;
         this.enableScaling = enableScaling;
         this.n = coef.length;
         this.tol = tol;
+        this.b = new double[n];
         this.scale = new double[n];
         this.o = new int[n];
         this.ans = new double[n];
@@ -26,6 +26,9 @@ public class CroutDecomposition {
     double[][] upper = new double[n][n];
 
     public void initiate(){
+    	for(int i=0; i<n; i++) {
+    		b[i] = coef[i][n];
+    	}
         for(int i =0; i <n; i++){
             for(int j=0; j<n; j++){
                 lower[i][j] = 0;
@@ -128,18 +131,18 @@ public class CroutDecomposition {
     /*public static void main(String[] args) {
         CroutDecomposition test;
         double[][] testCoef = {
-                {25, 5, 1},
-                {64, 8, 1},
-                {144, 12, 1}
+                {25, 5, 1,0},
+                {64, 8, 1,0},
+                {144, 12, 1,1}
         };
         double[] testB = {
                 0, 0, 1
         };
-        test = new CroutDecomposition(testCoef, testB, true, 1e-6);
+        test = new CroutDecomposition(testCoef, true, 1e-6);
         double[] testAns = test.Solve();
         for(int i = 0; i < 3; ++i){
             System.out.println(testAns[i]);
         }
-    }*/
-
+    }
+*/
 }
