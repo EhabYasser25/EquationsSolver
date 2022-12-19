@@ -1,5 +1,6 @@
 package com.example.phase1;
 
+
 public class GaussElimination {
 
     int n;
