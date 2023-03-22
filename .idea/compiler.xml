@@ -6,11 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Phase1" />
+        <module name="EquationsSolver" />
+        <module name="Equations Solver" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Phase1" target="17" />
-    </bytecodeTargetLevel>
   </component>
 </project>
